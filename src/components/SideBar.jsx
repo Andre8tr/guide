@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import logobar from "../assets/img/logobar.png";
 
 const menuItems = [
   { name: "Home", icon: "🏠" },
@@ -11,7 +13,8 @@ const menuItems = [
 export default function SideBar() {
   return (
     <aside className="h-screen w-56 bg-gray-800 text-white flex flex-col py-8">
-      <nav className="flex flex-col gap-4">
+      <Image src={logobar} alt="Logo" className="w-32 h-32 mx-auto mb-4" />
+      <nav className="flex flex-col gap-4 justify-center">
         {menuItems.map((item) => (
           <button
             key={item.name}
